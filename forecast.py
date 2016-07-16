@@ -19,9 +19,10 @@ cities = {"Austin": '30.303936,-97.754355',
 end_date = datetime.datetime.now()
 con = lite.connect('weather.db')
 cur = con.cursor()
-cities.keys()
+# cities.keys()
 with con:
-    cur.executescript('DROP TABLE IF EXISTS daily_temp')
+    #  Skip if it contains 180 rows of valid data
+    cur.executescript('DROP TABLE IF EXISTS daily_temp')  # Obtain error message for execute("DROP....")
     cur.execute('CREATE TABLE daily_temp '
                 '(day_of_reading INT, '
                 'Austin REAL, '
