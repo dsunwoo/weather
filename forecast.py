@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-api_key = "0d9e8b951e27bd2bde8c7820d80e2787"
+api_key = ""
 url = 'https://api.forecast.io/forecast/' + api_key
 
 cities = {"Austin": '30.303936,-97.754355',
